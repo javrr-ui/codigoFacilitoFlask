@@ -5,7 +5,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    data = {
+        "title": "Index",
+        "header": "Hola mundo"
+    }
+    return render_template('index.html', data=data)
 
 
 app.run(debug=True)
