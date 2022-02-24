@@ -11,5 +11,12 @@ def index():
     }
     return render_template('index.html', data=data)
 
+@app.route("/contacto")
+def contacto():
+    data = {
+        "title": "Contacto",
+        "header": "Seccion de contacto"
+    }
+    return render_template("contacto.html",data=data)
 
 app.run(debug=True)
