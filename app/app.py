@@ -19,4 +19,8 @@ def contacto():
     }
     return render_template("contacto.html",data=data)
 
+@app.route("/saludo/<nombre>")
+def saludo(nombre):
+    return f"hola {nombre}"
+    
 app.run(debug=True)
