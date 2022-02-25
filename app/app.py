@@ -22,5 +22,9 @@ def contacto():
 @app.route("/saludo/<nombre>")
 def saludo(nombre):
     return f"hola {nombre}"
-    
+
+@app.route("/suma/<int:valor1>/<int:valor2>")
+def suma(valor1, valor2):
+    return f"{valor1 + valor2}"
+
 app.run(debug=True)
