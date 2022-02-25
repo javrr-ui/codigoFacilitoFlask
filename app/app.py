@@ -27,4 +27,11 @@ def saludo(nombre):
 def suma(valor1, valor2):
     return f"{valor1 + valor2}"
 
+@app.route("/lenguajes")
+def lenguajes():
+    data = {
+        "lenguajes": ["Java", "Python", "JavaScript", "Go"]
+    }
+    return render_template("lenguajes.html", data=data)
+    
 app.run(debug=True)
