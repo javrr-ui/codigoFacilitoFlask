@@ -1,4 +1,4 @@
-from flask import Flask, render_template, requests
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -33,5 +33,10 @@ def lenguajes():
         "lenguajes": ["Java", "Python", "JavaScript", "Go"]
     }
     return render_template("lenguajes.html", data=data)
+
+@app.route("/hola")
+def hola():
+    print(request.args)
+    return "hola mundo"
     
 app.run(debug=True)
