@@ -34,9 +34,10 @@ def lenguajes():
     }
     return render_template("lenguajes.html", data=data)
 
-@app.route("/hola")
+@app.route("/datos")
 def hola():
     print(request.args)
-    return "hola mundo"
+    valor1 = request.args.get("valor1")
+    return f"Estos son los datos: {valor1}"
     
 app.run(debug=True)
