@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+@app.before_request
+def before_request():
+    print("antes de la petición")
+
 
 @app.route("/")
 def index():
