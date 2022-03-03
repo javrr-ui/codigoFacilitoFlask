@@ -6,6 +6,10 @@ app = Flask(__name__)
 def before_request():
     print("antes de la petición")
 
+@app.after_request
+def after_request(response):
+    print("Después de la petición")
+    return response
 
 @app.route("/")
 def index():
