@@ -17,6 +17,7 @@ def index():
         "title": "Index",
         "header": "Hola mundo"
     }
+    print("Ejecutando...")
     return render_template('index.html', data=data)
 
 @app.route("/contacto")
